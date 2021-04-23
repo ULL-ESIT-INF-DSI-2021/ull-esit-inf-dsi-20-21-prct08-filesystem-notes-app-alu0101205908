@@ -1,7 +1,10 @@
 export abstract class MapYReduce {
-    protected array: number[] = [1, 2, 3, 4];
+    protected array: number[] = [];
+    protected mapa: number[] = [];
   
-    constructor(){}
+    constructor(array: number[]){
+        this.array = array;
+    }
 
     public getArray(){
         return this.array
@@ -17,11 +20,11 @@ export abstract class MapYReduce {
             return (a**2);
         });
     
-        this.hookMap();
+        //this.hookMap();
     
-        this.reduce();
+        return this.reduce();
     
-        this.hookReduce();
+        //this.hookReduce();
     }
 
     protected abstract reduce(): void;
@@ -30,11 +33,8 @@ export abstract class MapYReduce {
     protected hookReduce() {}
 
     protected map(funcion: (item: number) => number) {
-        let mapa: number[] = [];
         this.array.forEach((item) => {
-              mapa.push(funcion(item)) 
+            this.mapa.push(funcion(item)) 
         });
-        console.log(mapa)
-        return mapa;
     }
 }

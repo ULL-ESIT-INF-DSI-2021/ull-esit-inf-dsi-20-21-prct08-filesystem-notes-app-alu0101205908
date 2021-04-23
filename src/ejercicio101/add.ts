@@ -3,17 +3,16 @@ import { MapYReduce } from "./ejercicio";
 export class AddMapYReduce extends MapYReduce {
 
     constructor(array: number[]){
-        super();
+        super(array);
     }
 
     public reduce(){
 
         let total: number = 0;
 
-        this.map().forEach(item => {
+        this.mapa.forEach(item => {
             total = item + total
         })
-        console.log(total)
         return total
     }
     

@@ -5,7 +5,6 @@ import {prueba} from '../src/ejercicio101/add'
 describe('Pruebas clase Reduce', ()=> {
 
     it('prueba.reduce() return ', ()=>{
-        console.log(prueba.run())
-        //expect(prueba.reduce()).to.be.equal();
+        expect(prueba.run()).to.be.equal(30);
     });
 });
