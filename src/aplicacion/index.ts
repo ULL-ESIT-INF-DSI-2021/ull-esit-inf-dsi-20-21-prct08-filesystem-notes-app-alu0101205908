@@ -1,5 +1,6 @@
 import { Add } from "./principal/operacionAdd";
 import { List } from "./principal/operacionList";
+import { Remove } from "./principal/operacionRemove";
 
 
 const yargs = require('yargs');
@@ -87,6 +88,7 @@ else if (comando == "read"){
 }
 else if (comando == "remove"){
 
+    new Remove(argv.usuario, argv.titulo);
 }
 else{
     console.log("¡Comando inexistente!");
