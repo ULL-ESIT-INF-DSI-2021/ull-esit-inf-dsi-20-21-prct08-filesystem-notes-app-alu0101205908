@@ -10,9 +10,19 @@ export class Print {
         return 1;
     }
 
+
+    printAzul(){
+        console.log(chalk.blue(`${this.mensaje}`));
+    }
+
     
     printVerde(){
         console.log(chalk.green(`${this.mensaje}`));
         return 0;
+    }
+
+
+    printAmarillo(){
+        console.log(chalk.yellow(`${this.mensaje}`));
     }
 }

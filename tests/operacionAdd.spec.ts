@@ -1,7 +1,8 @@
 import 'mocha';
 import {expect} from 'chai';
-import { notaAdd } from '../src/aplicacion/principal/operacionAdd';
+import { Add } from '../src/aplicacion/principal/operacionAdd';
 
+const notaAdd =  new Add("Borja", "Nota 1", "Esto es la nota 1", "verde");
 
 describe('Pruebas operación ADD', ()=> {
 

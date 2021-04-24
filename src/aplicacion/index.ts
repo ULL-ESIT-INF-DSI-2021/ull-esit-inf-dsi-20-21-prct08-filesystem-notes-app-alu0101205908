@@ -1,4 +1,6 @@
 import { Add } from "./principal/operacionAdd";
+import { List } from "./principal/operacionList";
+
 
 const yargs = require('yargs');
 
@@ -74,14 +76,11 @@ const comando = argv._[0];
 //console.log("El comando es: ", comando);
 
 if (comando == "add"){
-
     new Add(argv.usuario, argv.titulo, argv.texto, argv.color);
 }
 else if (comando == "list"){
 
-    console.log(argv.usuario)
-    //lista = new Lista(yargs.command.usuario);
-
+    new List(argv.usuario);
 }
 else if (comando == "read"){
 

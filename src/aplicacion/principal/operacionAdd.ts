@@ -69,5 +69,3 @@ export class Add {
         new Print(`OK: Se ha creado una nueva nota con el titulo ${this.nota.titulo}`).printVerde();
     }
 }
-
-export const notaAdd =  new Add("Borja", "Nota 1", "Esto es la nota 1", "verde");
