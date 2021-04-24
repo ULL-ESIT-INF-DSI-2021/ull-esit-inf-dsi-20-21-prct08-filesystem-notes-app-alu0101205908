@@ -10,12 +10,12 @@ export class Remove {
 
         this.rutaFichero = `./src/bbdd/${usuario}/${titulo}.json`;
 
-        this.comprobarTareaExistente(titulo);
+        this.comprobarNotaExistente(titulo);
         
     }
 
 
-    comprobarTareaExistente(titulo: string){
+    comprobarNotaExistente(titulo: string){
 
         try{
             unlinkSync(this.rutaFichero);

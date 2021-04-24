@@ -33,17 +33,17 @@ export class List {
         else{
             new Print("Tiene las siguientes notas: ").printVerde();
             this.listaNotas.forEach(nota => {
-                const data = readFileSync(`${this.ruta}/${nota}`);
-                if (data.includes("rojo")){
+                const datos = readFileSync(`${this.ruta}/${nota}`);
+                if (datos.includes(`"color:" "rojo"`)){
                     new Print(`${nota}`).printRojo();
                 }
-                else if (data.includes("azul")){
+                else if (datos.includes(`"color": "azul"`)){
                     new Print(`${nota}`).printAzul();
                 }
-                else if (data.includes("verde")){
+                else if (datos.includes(`"color": "verde"`)){
                     new Print(`${nota}`).printVerde();
                 }
-                else if (data.includes("amarillo")){
+                else if (datos.includes(`"color": "amarillo"`)){
                     new Print(`${nota}`).printAmarillo();
                 }
             });

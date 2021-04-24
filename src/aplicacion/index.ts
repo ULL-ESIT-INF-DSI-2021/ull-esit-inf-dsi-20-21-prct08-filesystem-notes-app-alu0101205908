@@ -1,6 +1,7 @@
 import { Add } from "./principal/operacionAdd";
 import { List } from "./principal/operacionList";
 import { Remove } from "./principal/operacionRemove";
+import { Read } from "./principal/operacionRead";
 
 
 const yargs = require('yargs');
@@ -85,6 +86,7 @@ else if (comando == "list"){
 }
 else if (comando == "read"){
 
+    new Read(argv.usuario, argv.titulo);
 }
 else if (comando == "remove"){
 

@@ -2,11 +2,11 @@ import 'mocha';
 import {expect} from 'chai';
 import { Remove } from '../src/aplicacion/principal/operacionRemove';
 
-const notaAdd =  new Remove("Borja", "Nota 1");
+const notaRemove =  new Remove("Borja", "Nota 1");
 
-describe('Pruebas operación ADD', ()=> {
+describe('Pruebas operación Remove', ()=> {
 
-    it('notaAdd.comprobarTareaExistente("Nota 1") return 0', ()=>{
-        expect(notaAdd.comprobarTareaExistente("Nota 1")).to.be.equal(0);
+    it('notaRemove.comprobarNotaExistente("Nota 1") return 0', ()=>{
+        expect(notaRemove.comprobarNotaExistente("Nota 1")).to.be.equal(0);
     });
 });
