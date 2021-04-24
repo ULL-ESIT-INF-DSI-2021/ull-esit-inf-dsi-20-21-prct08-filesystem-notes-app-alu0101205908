@@ -18,7 +18,7 @@ export class Remove {
     comprobarNotaExistente(titulo: string){
 
         try{
-            unlinkSync(this.rutaFichero);
+            //unlinkSync(this.rutaFichero);
             return new Print(`OK: Se ha eliminado la nota con titulo: ${titulo}`).printVerde();
         }
         catch(err){
