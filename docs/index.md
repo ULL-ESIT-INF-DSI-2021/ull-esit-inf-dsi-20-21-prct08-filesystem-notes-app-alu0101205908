@@ -109,7 +109,11 @@
 
 ### Comando Add:
 
-* El comando Add 
+* El comando Add se utilizará para añadir una nueva nota (o en caso de que sea un nuevo usuario se creará el directorio donde se alojarán sus notas). La sintaxis del comando es: 
+
+	* add --usuario="***usuario dueño de la nota***" --titulo="***titulo de la nota***" --texto="***texto que tiene la nota***" --color="***color del título de la nota***" 
+
+
 [helpAdd]: images/helpAdd.JPG "Help Add"
 [helpList]: images/helpList.JPG "Help List"
 [helpModify]: images/helpModify.JPG "Help Modify"
