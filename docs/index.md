@@ -69,35 +69,32 @@
 
 ## Desarrollo de la Aplicación:
 
-* Para resolver este primer ejercicio, se ha utilizado una clase Luchador, que será abstracta, luego no se podrá generar instancias de Luchadores, sin embargo, nos servirá como base para generar las clases de los personajes que explicaremos a continuación. Esta clase contendrá dos métodos abstractos que serán implementados en cada una de las clases que extienda la clase luchador.
+* En primer lugar, se testearon los módulos de yargs y de chalk por separado para comprobar su funcionamiento, así como, se realizó un documentación sobre estas herramientas. Una vez comprobado el funcionamiento de los módulos se ideó la estructuras de clases que iba a tener el sistema, y como consluión, se llevaría a cabo una clase para cada opción que tuviera la aplicación (además de una clase para realizar el coloreo de los mensajes y títulos con chalk. 
 
 
-* A continuación se desarrollaran extensiones de la clase Luchador, una una clase por cada personaje a luchar en el combate. Estos personajes/luchadores serán personajes de Pokemon, Marvel, DC comics, Star Wars y Dragon Ball. Estos nuevos objetos tendrán las siguientes propiedades:
+* Las operaciones (o comandos) que tiene que tener la aplicación son los siguientes:
 
 	* ***Nombre***
 	* ***Peso y altura***
 	* ***Tipo***
 	* ***Estadísticas básicas***
+	* 
+
+* Además, se incluyó una opción de ayuda (-h | --help), para especificar cómo funciona el comando:
+
+![Help Add][helpAdd]
+
+![Help List][helpList]
+
+![Help Modify][helpModify]
+
+![Help Read][helpRead]
+
+![Help Remove][helpRemove]
 
 
-* Además, se han desarrollado los correspondientes métodos getter abstractos de la clase Luchador y se han agregado más getter, para acceder a las propiedades de todos los personajes o Luchadores. Asimismo, también se han implementado los métodos setter para cada una de las propiedades:
-
-	* ***getNombre***
-	* ***getPesoYAltura***
-	* ***getTipo***
-	* ***getEstadísticasBásicas***
-	* ***setNombre***
-	* ***setPesoYAltura***
-	* ***setTipo***
-	* ***setEstadísticasBásicas***
-
-
-![Ejercicio Combate 1][Combate1]
-
-![Ejercicio Combate 2][Combate2]
-
-![Ejercicio Combate 3][Combate3]
-
-![Ejercicio Combate 4][Combate4]
-
-![Ejercicio Combate 5][Combate5]
+[helpAdd]: images/helpAdd.JPG "Help Add"
+[helpList]: images/helpList.JPG "Help List"
+[helpModify]: images/helpModify.JPG "Help Modify"
+[helpRead]: images/helpRead.JPG "Help Read"
+[helpRemove]: images/helpRemove.JPG "Help Remove"
