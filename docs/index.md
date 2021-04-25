@@ -136,6 +136,27 @@
 		![Add 3][add3]
 		
 		
+### Comando Add:
+
+* El comando List se utilizará para listar los títulos de las notas de un usuario, y se coloreará del color que se especifique en la nota. La sintaxis del comando es: 
+
+	* list --usuario="***usuario dueño de la nota***" 
+
+* Para este segundo comando, se implementó una clase donde se le pasan los atributos del mismo al constructor. Se comprueba si el usuario tiene notas o no, y en caso afirmativo se muestran los títulos de las notas en el color indicado en la misma. Los métodos de la API de node.js del File System que se utilizarón fueron los siguietes:
+
+	* ***readdirSync***: Para mostrar el contenido de un directorio. Utilizado para almacenar los títulos de las notas del directorio.
+	* ***readFileSync***: Para leer de un fichero. Utilizado para leer cada nota del directorio.
+
+* Ejemplo de uso: 
+
+	* ***Listar notas (ok):***
+
+		![List 1][list1]
+		
+		
+	* ***Creación de una nota (ERROR: Usuario no tiene notas):***
+
+		![List 2][list2]		
 		
 		
 		
@@ -147,3 +168,5 @@
 [add1]: images/add1.JPG "Add 1"
 [add2]: images/add2.JPG "Add 2"
 [add3]: images/add3.JPG "Add 3"
+[list1]: images/list1.JPG "List 1"
+[list2]: images/list2.JPG "List 2"
