@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Print | practica8</title>
+	<title>Remove | practica8</title>
 	<meta name="description" content="Documentation for practica8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">practica8</a>
 				</li>
 				<li>
-					<a href="../modules/aplicacion_print_print.html">aplicacion/print/print</a>
+					<a href="../modules/aplicacion_principal_operacionremove.html">aplicacion/principal/operacionRemove</a>
 				</li>
 				<li>
-					<a href="aplicacion_print_print.print.html">Print</a>
+					<a href="aplicacion_principal_operacionremove.remove.html">Remove</a>
 				</li>
 			</ul>
-			<h1>Class Print</h1>
+			<h1>Class Remove</h1>
 		</div>
 	</div>
 </header>
@@ -71,8 +71,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Clase Print. Clase utilizada para colorear los mensajes. Tiene 4 métodos (uno para cada color
-						rojo, azul, verde y azul) y utiliza la librería chalk para realizar el pintado.</p>
+						<p>Clase Remove. Utilizada para realizar la operación de Remove (eliminar una nota).
+							Se comprueba si existe una nota título dado. En caso negativo se mostrará un
+						mensaje de error, y en caso afirmativo, se eliminará la nota.</p>
 					</div>
 				</div>
 			</section>
@@ -80,7 +81,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Print</span>
+						<span class="target">Remove</span>
 					</li>
 				</ul>
 			</section>
@@ -91,16 +92,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="aplicacion_print_print.print.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="aplicacion_principal_operacionremove.remove.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="aplicacion_principal_operacionremove.remove.html#rutafichero" class="tsd-kind-icon">ruta<wbr>Fichero</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="aplicacion_print_print.print.html#printamarillo" class="tsd-kind-icon">print<wbr>Amarillo</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="aplicacion_print_print.print.html#printazul" class="tsd-kind-icon">print<wbr>Azul</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="aplicacion_print_print.print.html#printrojo" class="tsd-kind-icon">print<wbr>Rojo</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="aplicacion_print_print.print.html#printverde" class="tsd-kind-icon">print<wbr>Verde</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="aplicacion_principal_operacionremove.remove.html#comprobarnotaexistente" class="tsd-kind-icon">comprobar<wbr>Nota<wbr>Existente</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,123 +116,85 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Print<span class="tsd-signature-symbol">(</span>mensaje<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="aplicacion_print_print.print.html" class="tsd-signature-type" data-tsd-kind="Class">Print</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Remove<span class="tsd-signature-symbol">(</span>usuario<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, titulo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="aplicacion_principal_operacionremove.remove.html" class="tsd-signature-type" data-tsd-kind="Class">Remove</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/7efd4e6/src/aplicacion/print/print.ts#L8">aplicacion/print/print.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/d9c1b76/src/aplicacion/principal/operacionRemove.ts#L12">aplicacion/principal/operacionRemove.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Constructor de la clase Print. Recibe como parámetro el mensaje a colorear</p>
+									<p>Constructor de la clase Remove.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>mensaje: <span class="tsd-signature-type">string</span></h5>
+									<h5>usuario: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Mensaje para mostrar</p>
+										<p>Usuario dueño de la nota.</p>
+									</div>
+								</li>
+								<li>
+									<h5>titulo: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Título de la nota.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="aplicacion_print_print.print.html" class="tsd-signature-type" data-tsd-kind="Class">Print</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="aplicacion_principal_operacionremove.remove.html" class="tsd-signature-type" data-tsd-kind="Class">Remove</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="rutafichero" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> ruta<wbr>Fichero</h3>
+					<div class="tsd-signature tsd-kind-icon">ruta<wbr>Fichero<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/d9c1b76/src/aplicacion/principal/operacionRemove.ts#L12">aplicacion/principal/operacionRemove.ts:12</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="printamarillo" class="tsd-anchor"></a>
-					<h3>print<wbr>Amarillo</h3>
+					<a name="comprobarnotaexistente" class="tsd-anchor"></a>
+					<h3>comprobar<wbr>Nota<wbr>Existente</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">print<wbr>Amarillo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">comprobar<wbr>Nota<wbr>Existente<span class="tsd-signature-symbol">(</span>titulo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/7efd4e6/src/aplicacion/print/print.ts#L49">aplicacion/print/print.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/d9c1b76/src/aplicacion/principal/operacionRemove.ts#L35">aplicacion/principal/operacionRemove.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Método printAmarillo. Utilizado para colorear el mensaje en amarillo.</p>
+									<p>Método comprobarNotaExistente. Se utiliza para comprobar si la nota con el título
+									dado existe o no.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="printazul" class="tsd-anchor"></a>
-					<h3>print<wbr>Azul</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">print<wbr>Azul<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/7efd4e6/src/aplicacion/print/print.ts#L31">aplicacion/print/print.ts:31</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Método printAzul. Utilizado para colorear el mensaje en azul.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="printrojo" class="tsd-anchor"></a>
-					<h3>print<wbr>Rojo</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">print<wbr>Rojo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/7efd4e6/src/aplicacion/print/print.ts#L22">aplicacion/print/print.ts:22</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Método printRojo. Utilizado para colorear el mensaje en rojo.</p>
-								</div>
-							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>titulo: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Título de la nota a eliminar.</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>Retorna 1, para indicar que se ha detectado errores donde se invoque.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="printverde" class="tsd-anchor"></a>
-					<h3>print<wbr>Verde</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">print<wbr>Verde<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/blob/7efd4e6/src/aplicacion/print/print.ts#L40">aplicacion/print/print.ts:40</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Método printVerde. Utilizado para colorear el mensaje en verde.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-							<p>Retorna 0, para indicar la no detección de errores donde se invoque.</p>
+							<p>SE retornará un 0 si la nota existe, o, un 1 en caso de que no exista.</p>
 						</li>
 					</ul>
 				</section>
@@ -255,13 +221,13 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/aplicacion_principal_operacionread.html">aplicacion/principal/operacion<wbr>Read</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/aplicacion_principal_operacionremove.html">aplicacion/principal/operacion<wbr>Remove</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/aplicacion_principal_tipodefinido.html">aplicacion/principal/tipo<wbr>Definido</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/aplicacion_print_print.html">aplicacion/print/print</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -277,22 +243,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="aplicacion_print_print.print.html" class="tsd-kind-icon">Print</a>
+						<a href="aplicacion_principal_operacionremove.remove.html" class="tsd-kind-icon">Remove</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="aplicacion_print_print.print.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="aplicacion_principal_operacionremove.remove.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="aplicacion_principal_operacionremove.remove.html#rutafichero" class="tsd-kind-icon">ruta<wbr>Fichero</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="aplicacion_print_print.print.html#printamarillo" class="tsd-kind-icon">print<wbr>Amarillo</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="aplicacion_print_print.print.html#printazul" class="tsd-kind-icon">print<wbr>Azul</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="aplicacion_print_print.print.html#printrojo" class="tsd-kind-icon">print<wbr>Rojo</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="aplicacion_print_print.print.html#printverde" class="tsd-kind-icon">print<wbr>Verde</a>
+								<a href="aplicacion_principal_operacionremove.remove.html#comprobarnotaexistente" class="tsd-kind-icon">comprobar<wbr>Nota<wbr>Existente</a>
 							</li>
 						</ul>
 					</li>
@@ -315,6 +275,9 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 			</ul>
 		</div>
 	</div>
