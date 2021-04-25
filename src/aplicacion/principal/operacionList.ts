@@ -2,12 +2,22 @@ import { readdirSync } from "fs";
 import { readFileSync } from "fs";
 import { Print } from "../print/print";
 
+
+/**
+ * Clase List. Utilizada para realizar la operación de List (listar las notas de un 
+ * usuario). Se comprueba si el usuario tiene notas o no, y en caso afirmativo se 
+ * muestran los títulos de las notas en el color indicado en la misma.
+ */
 export class List {
 
     private listaNotas: string[] = [];
     private ruta: string = "";
 
 
+    /**
+     * Constructor de la clase List.
+     * @param usuario Usuario dueño de la/las nota/s.
+     */
     constructor(usuario: string){
 
         try {
@@ -16,11 +26,17 @@ export class List {
         }
         catch(err){
 
-            new Print(err).printRojo();
+            new Print(`ERROR: El usuario ${usuario} no tiene notas.`).printRojo();
         }
     }
 
 
+    /**
+     * Método comprobarNotas. Se lee el directorio del usuario y se almacenan en un array
+     * los títulos de las notas. Se comprueba si el array está vacío, lo que indicaría que
+     * el usuario no tiene notas, y en caso contrario, se comprobará el color que se indica 
+     * en la nota y se mostrará por la terminal el título con el color específico.
+     */
     comprobarNotas(){
 
         readdirSync(this.ruta).forEach(nota => {
@@ -33,8 +49,8 @@ export class List {
         else{
             new Print("Tiene las siguientes notas: ").printVerde();
             this.listaNotas.forEach(nota => {
-                const datos = readFileSync(`${this.ruta}/${nota}`);
-                if (datos.includes(`"color:" "rojo"`)){
+                const datos = readFileSync(`${this.ruta}/${nota}`).toString();
+                if (datos.includes(`"color": "rojo"`)){
                     new Print(`${nota}`).printRojo();
                 }
                 else if (datos.includes(`"color": "azul"`)){

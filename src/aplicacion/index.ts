@@ -3,10 +3,15 @@ import { List } from "./principal/operacionList";
 import { Remove } from "./principal/operacionRemove";
 import { Read } from "./principal/operacionRead";
 import { Modify } from "./principal/operacionModify";
+import { Print } from "./print/print";
 
 
 const yargs = require('yargs');
 
+/**
+ * Comando --add: Sirve añadir una nota.
+ * OPCIONES: --usuario="nombre usuario" --titulo="titulo de la nota" --texto="texto de la nota" --color="color de la nota"
+ */
 yargs.command("add", 'Añadir una nueva nota', {
     usuario: {
         describe: 'Usuario dueño de la nota',
@@ -31,6 +36,10 @@ yargs.command("add", 'Añadir una nueva nota', {
 });
 
 
+/**
+ * Comando --list: Sirve para listar las notas de un usuario dado.
+ * OPCIONES: --usuario="nombre usuario"
+ */
 yargs.command("list", "Listar las notas de un usuario", {
     usuario: {
         describe: 'Usuario a listar las notas',
@@ -40,6 +49,10 @@ yargs.command("list", "Listar las notas de un usuario", {
 });
 
 
+/**
+ * Comando --read: Sirve para leer la nota de un usuario y titulo dados.
+ * OPCIONES: --usuario="nombre usuario" --titulo="titulo de la nota"
+ */
 yargs.command("read", "Leer nota de un usuario", {
     usuario: {
         describe: 'Usuario dueño de la nota a leer',
@@ -54,6 +67,10 @@ yargs.command("read", "Leer nota de un usuario", {
 });
 
 
+/**
+ * Comando --remove: Sirve para borrar la nota de un usuario y titulo dados.
+ * OPCIONES: --usuario="nombre usuario" --titulo="titulo de la nota"
+ */
 yargs.command("remove", "Borrar nota de un usuario", {
     usuario: {
         describe: 'Usuario dueño de la nota a borrar',
@@ -75,8 +92,6 @@ yargs.alias("help", "h");
 const argv = yargs.argv;
 const comando = argv._[0];
 
-//console.log("Los argumentos son: ", argv);
-//console.log("El comando es: ", comando);
 
 if (comando == "add"){
     new Add(argv.usuario, argv.titulo, argv.texto, argv.color);
@@ -98,7 +113,5 @@ else if (comando == "modify"){
     new Modify(argv.usuario, argv.titulo, argv.texto, argv.color);
 }
 else{
-    console.log("¡Comando inexistente!");
+    new Print("¡Comando inexistente!").printRojo();
 }
-
-//console.log(yargs.argv)

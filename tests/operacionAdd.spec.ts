@@ -14,7 +14,7 @@ describe('Pruebas operación ADD', ()=> {
         expect(notaAdd.comprobarColor("verde")).to.be.equal(0);
     });
 
-    it('notaAdd.comprobarTareaExistente("Nota 1") return 1', ()=>{
-        expect(notaAdd.comprobarTareaExistente("Nota 1")).to.be.equal(1);
+    it('notaAdd.comprobarNotaExistente("Nota 1") return 1', ()=>{
+        expect(notaAdd.comprobarNotaExistente("Nota 1")).to.be.equal(1);
     });
 });

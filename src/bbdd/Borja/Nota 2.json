@@ -2,7 +2,7 @@
   {
     "usuario": "Borja",
     "titulo": "Nota 2",
-    "texto": "Esto es la nota 1",
-    "color": "verde"
+    "texto": "Texto para la nota 2",
+    "color": "rojo"
   }
 ]
