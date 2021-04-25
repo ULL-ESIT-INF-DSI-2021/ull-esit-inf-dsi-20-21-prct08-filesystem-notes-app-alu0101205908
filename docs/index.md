@@ -133,7 +133,7 @@
 				
 	* ***Creación de una nota (ERROR: Color no disponible):***
 
-		![Add 3][add2]
+		![Add 3][add3]
 		
 		
 		
