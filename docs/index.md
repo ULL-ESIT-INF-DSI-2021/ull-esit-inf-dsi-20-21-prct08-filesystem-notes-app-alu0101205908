@@ -176,9 +176,32 @@
 		![Modify 1][modify1]
 		
 		
-	* ***Modificación de una nota (ERROR: Nota con mismo título):***
+	* ***Modificación de una nota (ERROR: Nota no existe):***
 
 		![Modify 2][modify2]
+		
+		
+### Comando Read:
+
+* El comando Read se utilizará para leer (mostrar el título y texto) de una nota. La sintaxis del comando es: 
+
+	* read --usuario="***usuario dueño de la nota***" --titulo="***titulo de la nota***"
+
+* Para este cuarto comando, se implementó una clase donde se le pasan los atributos del mismo al constructor. Se comprueba si existe una nota con el título dado. En caso negativo se mostrará un mensaje de error, y en caso afirmativo, se mostrará el titulo de acuerdo al color que especifica la nota, y se mostrará el texto que tiene la misma. Los métodos de la API de node.js del File System que se utilizarón fueron los siguietes:
+
+	* ***readFileSync***: Para leer un fichero. Utilizado para obtener el contenido de la nota.
+	* ***openSync***: Para abrir un fichero. Utilizado para comprobar si existe en el directorio una nota con el mismo nombre.
+
+* Ejemplo de uso: 
+
+	* ***Lectura de una nota (ok):***
+
+		![Read 1][read1]
+		
+		
+	* ***Lectura de una nota (ERROR: Nota no existe):***
+
+		![Read 2][read2]
 		
 		
 [helpAdd]: images/helpAdd.JPG "Help Add"
@@ -193,3 +216,5 @@
 [list2]: images/list2.JPG "List 2"
 [modify1]: images/modify1.JPG "Modify 1"
 [modify2]: images/modify2.JPG "Modify 2"
+[read1]: images/read1.JPG "Read 1"
+[read2]: images/read2.JPG "Read 2"
