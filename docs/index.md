@@ -74,13 +74,14 @@
 
 * Las operaciones (o comandos) que tiene que tener la aplicación son los siguientes:
 
-	* ***Nombre***
-	* ***Peso y altura***
-	* ***Tipo***
-	* ***Estadísticas básicas***
-	* 
+	* ***add***
+	* ***list***
+	* ***modify***
+	* ***read***
+	* ***remove*** 
 
-* Además, se incluyó una opción de ayuda (-h | --help), para especificar cómo funciona el comando:
+
+* Además, se incluyó una opción de ayuda (-h o --help), para especificar cómo funciona el comando:
 
 	* ***add -h***
 
