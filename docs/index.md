@@ -204,6 +204,28 @@
 		![Read 2][read2]
 		
 		
+### Comando Remove:
+
+* El comando Remove se utilizará para eliminar una nota. La sintaxis del comando es: 
+
+	* remove --usuario="***usuario dueño de la nota***" --titulo="***titulo de la nota***"
+
+* Para este último comando, se implementó una clase donde se le pasan los atributos del mismo al constructor. Se comprueba si existe una nota con el título dado. En caso negativo se mostrará un mensaje de error, y en caso afirmativo, se eliminará la nota. Los métodos de la API de node.js del File System que se utilizarón fueron los siguietes:
+
+	* ***unlinkSync***: Para borrar un fichero. Utilizado para comprobar si existe el fichero en el directorio, y en caso afirmativo borrarlo.
+
+* Ejemplo de uso: 
+
+	* ***Borrado de una nota (ok):***
+
+		![Remove 1][remove1]
+		
+		
+	* ***Borrado de una nota (ERROR: Nota no existe):***
+
+		![Remove 2][remove2]
+		
+		
 [helpAdd]: images/helpAdd.JPG "Help Add"
 [helpList]: images/helpList.JPG "Help List"
 [helpModify]: images/helpModify.JPG "Help Modify"
@@ -218,3 +240,5 @@
 [modify2]: images/modify2.JPG "Modify 2"
 [read1]: images/read1.JPG "Read 1"
 [read2]: images/read2.JPG "Read 2"
+[remove1]: images/remove1.JPG "Remove 1"
+[remove2]: images/remove2.JPG "Remove 2"
