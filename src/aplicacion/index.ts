@@ -85,6 +85,34 @@ yargs.command("remove", "Borrar nota de un usuario", {
 });
 
 
+/**
+ * Comando --modify: Sirve para modificar una nota.
+ * OPCIONES: --usuario="nombre usuario" --titulo="titulo de la nota" --texto="texto de la nota" --color="color de la nota"
+ */
+ yargs.command("modify", 'Modificar una nueva nota', {
+    usuario: {
+        describe: 'Usuario dueño de la nota',
+        demandOption: true,
+        type: 'string',
+    },
+    titulo: {
+        describe: 'Titulo de la nota',
+        demandOption: true,
+        type: 'string',
+    },
+    texto: {
+        describe: 'Cuerpo de la nota',
+        demandOption: true,
+        type: 'string',
+    },
+    color: {
+        describe: 'Color de la nota',
+        demandOption: true,
+        type: 'string',
+    },
+});
+
+
 yargs.help();
 yargs.alias("help", "h");
 
