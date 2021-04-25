@@ -109,7 +109,7 @@
 
 ### Comando Add:
 
-	* El comando Add 
+* El comando Add 
 [helpAdd]: images/helpAdd.JPG "Help Add"
 [helpList]: images/helpList.JPG "Help List"
 [helpModify]: images/helpModify.JPG "Help Modify"
