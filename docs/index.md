@@ -5,7 +5,7 @@
 
 ## Configuración del entorno de trabajo:
 
-* En primer lugar, hemos creado un nuevo directorio para alojar esta nueva práctica en nuestro directorio de prácticas. Además, creamos un proyecto como vimos en clase de teoría, para ello, lo que se hizo fue lo siguiente:
+* En primer lugar, se ha creado un nuevo directorio para alojar esta nueva práctica en nuestro directorio de prácticas. Además, creamos un proyecto como vimos en clase de teoría, para ello, lo que se hizo fue lo siguiente:
 	
 	* Generamos un fichero package.json en la raíz de nuestro proyecto, para gestionar las dependencias.
 	
@@ -69,7 +69,7 @@
 
 ## Desarrollo de la Aplicación:
 
-* En primer lugar, se testearon los módulos de yargs y de chalk por separado para comprobar su funcionamiento, así como, se realizó un documentación sobre estas herramientas. Una vez comprobado el funcionamiento de los módulos se ideó la estructuras de clases que iba a tener el sistema, y como consluión, se llevaría a cabo una clase para cada opción que tuviera la aplicación (además de una clase para realizar el coloreo de los mensajes y títulos con chalk. 
+* En primer lugar, se testearon los módulos de yargs y de chalk por separado para comprobar su funcionamiento, así como, se realizó una documentación sobre estas herramientas. Una vez comprobado el funcionamiento de los módulos se ideó la estructuras de clases que iba a tener el sistema, y como consluión, se llevaría a cabo una clase para cada opción que tuviera la aplicación (además de una clase para realizar el coloreo de los mensajes y títulos con chalk). 
 
 
 * Las operaciones (o comandos) que tiene que tener la aplicación son los siguientes:
@@ -226,6 +226,11 @@
 		![Remove 2][remove2]
 		
 * ***NOTA:*** La línea 38 del fichero operacionRemove.ts es donde se aplica el comando unLinkSync, y está comentada, dado que sino fallarán los tests en GitHub Actions porque se aplica para una nota estática (que ya está borrada). Para que funcione correctamente este comando habrá que descomentar la línea. 
+		
+
+### Operación Print:
+
+* Se ha implementado una clase para realizar la operación de imprimir los mensajes con colores (mediante la librería chalk). Esta clase tiene 4 métodos (4 colores), que son para imprimir por la consola el mensaje de acuerdo a uno de los colores. En el caso de El método printVerde() retorna un 0 (a modo de indicar que no hay fallo) y el método printRojo() retorna un 1 (para indicar que falló algo). Esto último es meramente informativo para llevar a cabo los tests de los comandos que ejecuta la aplicación. 
 		
 		
 [helpAdd]: images/helpAdd.JPG "Help Add"
