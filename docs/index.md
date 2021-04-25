@@ -225,6 +225,8 @@
 
 		![Remove 2][remove2]
 		
+* ***NOTA:*** La línea 38 del fichero operacionRemove.ts es donde se aplica el comando unLinkSync, y está comentada, dado que sino fallarán los tests en GitHub Actions porque se aplica para una nota estática (que ya está borrada). Para que funcione correctamente este comando habrá que descomentar la línea. 
+		
 		
 [helpAdd]: images/helpAdd.JPG "Help Add"
 [helpList]: images/helpList.JPG "Help List"
