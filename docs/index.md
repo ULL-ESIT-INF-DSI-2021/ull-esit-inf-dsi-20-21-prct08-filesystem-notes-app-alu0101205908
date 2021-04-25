@@ -1,37 +1,65 @@
-## Welcome to GitHub Pages
+# PRÁCTICA 8: Aplicación de procesamiento de notas de texto
 
-You can use the [editor on GitHub](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/edit/informe/docs/index.md) to maintain and preview the content for your website in Markdown files.
+* En esta octava práctica, se ha implementado la aplicación de procesamiento que se ha solicitado, utilizando para ello TypeScript como lenguaje, Node.js como entorno de ejecución, la API de file system de node y Visual Studio Code para el desarrollo del proyecto. Además, se han atendido a los principios SOLID.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* En primer lugar, hemos creado un nuevo directorio para alojar esta nueva práctica en nuestro directorio de prácticas. Además, creamos un proyecto como vimos en clase de teoría, para ello, lo que se hizo fue lo siguiente:
+	
+	* Generamos un fichero package.json en la raíz de nuestro proyecto, para gestionar las dependencias.
+	
+		* **npm init --yes**
 
-### Markdown
+	* Generamos un fichero tsconfig.json en la raíz de nuestro proyecto, que va a contener las opciones del compilador de TypeScript.
+	
+		* **tsc --init**
+		* De entre todas las opciones que se ofrecen, solo vamos a descomentar y completar las siguientes:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+                      “exclude”: [
+		                   “./test”,
+		                   “.node_modules”,
+		                   “./dist” ],		      
+    	              "target": "ES2020",	  
+                      "declaration": true, 	  
+    	              "outDir": "./dist",	  
+    	              "rootDir": "./src",	  
+                      "noImplicitAny": true,   	  
+                      "strictNullChecks": true,	  
+                      "noImplicitReturns": true
 
-```markdown
-Syntax highlighted code block
+	* Se utilizará el paquete watch para detectar los cambios realizados sobre los ficheros con código fuente en TypeScript (los almacenados en el directorio src).
+		
+		* **npm install --save-dev tsc-watch**
+		* En el package.json, añadimos a la sección de script: "start": "tsc-watch --onSuccess \"node dist/index.js\""
 
-# Header 1
-## Header 2
-### Header 3
+	* Se utilizará el paquete typedoc para generar la documentación del proyecto.
+		
+		* **npm install --save-dev typedoc**
+		* Crear el fichero typedoc.json, y añadimos:
+		
+                {
+	                "entryPoints": ["./src"],
+	                "out": ["./doc"]
+                }
+      * En el package.json, añadimos a la sección de script: “doc”: “typedoc”
 
-- Bulleted
-- List
+  * Se utilizará el framework Mocha y la librería de asertos Chai para generar las pertinentes pruebas de desarrollo.
+  
+    * **npm install --save-dev mocha chai @types/mocha @types/chai ts-node**
+    * Crear el fichero .mocharc.json, y añadimos:
 
-1. Numbered
-2. List
+          {
+	            “extension”: [“ts”],
+              “spec”: “tests/**/*.spec.ts”,
+              “require”: “ts-node/register”
+          }
+          
+    * Crear el directorio tests, donde se alojarán las pruebas
+    * En el package.json, añadimos “test”: “mocha”
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101205908/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+  * Se utilizarán las GitHub Actions para realizar la integración continua y la inspección con Sonar Cloud:
+    * Instalamos TypeScript como dependencia: npm install --save-dev typescript
+    * Añadimos en GitHub Actions el workflow de Node.js y configuramos un workflow para los tests.
+    
+    * Incluimos en el package.JSON "coverage": "nyc npm test && nyc report --reporter=lcov"
+    * En el directorio .github/worflows creamos un workflow para el coveralls y otro para SonarCloud.
+    
+  * Se crea un fichero .gitignore, para ignorar ciertos directorios o archivos a la hora de hacer el push al GitHub, y un fichero README.md para hacer una breve introducción a la práctica.
