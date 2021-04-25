@@ -113,9 +113,37 @@
 
 	* add --usuario="***usuario dueño de la nota***" --titulo="***titulo de la nota***" --texto="***texto que tiene la nota***" --color="***color del título de la nota***" 
 
+* Para este primer comando, se implementó una clase donde se le pasan los atributos del mismo al constructor. Se comprueba si el usuario es nuevo o no, y en caso negativo, se creará el directorio donde se alojarán sus notas. Se comprueba si ya existe una nota con el mismo título para el usuario dado, y en caso afirmativo se lanzará un mensaje de ERROR. Se comprueba si el color introducido está disponible (rojo, azul, verde, amarillo). En caso de que cumpla todas las comprobaciones, se añadirá una nueva nota al directorio del usuario. Los métodos de la API de node.js del File System que se utilizarón fueron los siguietes:
 
+	* ***openSync***: Para abrir un fichero. Utilizado para comprobar si existe en el directorio una nota con el mismo nombre.
+	* ***mkdirSync***: Para crear un nuevo directorio. Utilizado para comprobar si existe en la bbdd un directorio con el mismo nombre, o crear un nuevo directorio.
+	* ***writeFileSync***: Para escribir en un fichero. Utilizado para escribir la nota en el fichero "titulo de la nota".json.
+
+* Ejemplo de uso: 
+
+	* ***Creación de una nota (ok):***
+
+		![Add 1][add1]
+		
+		
+	* ***Creación de una nota (ERROR: Nota con mismo título):***
+
+		![Add 2][add2]
+	
+				
+	* ***Creación de una nota (ERROR: Color no disponible):***
+
+		![Add 3][add2]
+		
+		
+		
+		
+		
 [helpAdd]: images/helpAdd.JPG "Help Add"
 [helpList]: images/helpList.JPG "Help List"
 [helpModify]: images/helpModify.JPG "Help Modify"
 [helpRead]: images/helpRead.JPG "Help Read"
 [helpRemove]: images/helpRemove.JPG "Help Remove"
+[add1]: images/add1.JPG "Add 1"
+[add2]: images/add2.JPG "Add 2"
+[add3]: images/add3.JPG "Add 3"
