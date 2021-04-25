@@ -82,15 +82,29 @@
 
 * Además, se incluyó una opción de ayuda (-h | --help), para especificar cómo funciona el comando:
 
-![Help Add][helpAdd]
+	* ***add -h***
 
-![Help List][helpList]
+		![Help Add][helpAdd]
 
-![Help Modify][helpModify]
 
-![Help Read][helpRead]
+	* ***list -h***
 
-![Help Remove][helpRemove]
+		![Help List][helpList]
+		
+		
+	* ***modify -h***
+
+		![Help Modify][helpModify]
+
+	
+	* ***read -h***
+	
+		![Help Read][helpRead]
+
+
+	* ***remove -h***
+	
+		![Help Remove][helpRemove]
 
 
 [helpAdd]: images/helpAdd.JPG "Help Add"
