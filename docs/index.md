@@ -2,6 +2,9 @@
 
 * En esta octava práctica, se ha implementado la aplicación de procesamiento que se ha solicitado, utilizando para ello TypeScript como lenguaje, Node.js como entorno de ejecución, la API de file system de node y Visual Studio Code para el desarrollo del proyecto. Además, se han atendido a los principios SOLID.
 
+
+## Configuración del entorno de trabajo:
+
 * En primer lugar, hemos creado un nuevo directorio para alojar esta nueva práctica en nuestro directorio de prácticas. Además, creamos un proyecto como vimos en clase de teoría, para ello, lo que se hizo fue lo siguiente:
 	
 	* Generamos un fichero package.json en la raíz de nuestro proyecto, para gestionar las dependencias.
@@ -63,3 +66,38 @@
     * En el directorio .github/worflows creamos un workflow para el coveralls y otro para SonarCloud.
     
   * Se crea un fichero .gitignore, para ignorar ciertos directorios o archivos a la hora de hacer el push al GitHub, y un fichero README.md para hacer una breve introducción a la práctica.
+
+## Desarrollo de la Aplicación:
+
+* Para resolver este primer ejercicio, se ha utilizado una clase Luchador, que será abstracta, luego no se podrá generar instancias de Luchadores, sin embargo, nos servirá como base para generar las clases de los personajes que explicaremos a continuación. Esta clase contendrá dos métodos abstractos que serán implementados en cada una de las clases que extienda la clase luchador.
+
+
+* A continuación se desarrollaran extensiones de la clase Luchador, una una clase por cada personaje a luchar en el combate. Estos personajes/luchadores serán personajes de Pokemon, Marvel, DC comics, Star Wars y Dragon Ball. Estos nuevos objetos tendrán las siguientes propiedades:
+
+	* ***Nombre***
+	* ***Peso y altura***
+	* ***Tipo***
+	* ***Estadísticas básicas***
+
+
+* Además, se han desarrollado los correspondientes métodos getter abstractos de la clase Luchador y se han agregado más getter, para acceder a las propiedades de todos los personajes o Luchadores. Asimismo, también se han implementado los métodos setter para cada una de las propiedades:
+
+	* ***getNombre***
+	* ***getPesoYAltura***
+	* ***getTipo***
+	* ***getEstadísticasBásicas***
+	* ***setNombre***
+	* ***setPesoYAltura***
+	* ***setTipo***
+	* ***setEstadísticasBásicas***
+
+
+![Ejercicio Combate 1][Combate1]
+
+![Ejercicio Combate 2][Combate2]
+
+![Ejercicio Combate 3][Combate3]
+
+![Ejercicio Combate 4][Combate4]
+
+![Ejercicio Combate 5][Combate5]
