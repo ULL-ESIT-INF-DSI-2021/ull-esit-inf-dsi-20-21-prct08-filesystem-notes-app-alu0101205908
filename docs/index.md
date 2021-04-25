@@ -136,7 +136,7 @@
 		![Add 3][add3]
 		
 		
-### Comando Add:
+### Comando List:
 
 * El comando List se utilizará para listar los títulos de las notas de un usuario, y se coloreará del color que se especifique en la nota. La sintaxis del comando es: 
 
@@ -158,6 +158,27 @@
 
 		![List 2][list2]		
 		
+	
+### Comando Modify:
+
+* El comando Modify se utilizará para modificar una nueva nota. La sintaxis del comando es: 
+
+	* modify --usuario="***usuario dueño de la nota***" --titulo="***titulo de la nota***" --texto="***texto que tiene la nota***" --color="***color del título de la nota***" 
+
+* Para este tercer comando, se implementó una clase donde se le pasan los atributos del mismo al constructor. Se comprueba si la nota dada por el usuario existe, en caso negativo se mostrará un mensaje de ERROR. Si la nota existe se borrará y se procederá a invocar a la operación Add, pasándole las especificaciones indicadas en el comando modify. Los métodos de la API de node.js del File System que se utilizarón fueron los siguietes:
+
+	* ***unlinkSync***: Para borrar un fichero. Utilizado para comprobar si existe el fichero en el directorio, y en caso afirmativo borrarlo.
+
+* Ejemplo de uso: 
+
+	* ***Modificación de una nota (ok):***
+
+		![Modify 1][modify1]
+		
+		
+	* ***Modificación de una nota (ERROR: Nota con mismo título):***
+
+		![Modify 2][modify2]
 		
 		
 [helpAdd]: images/helpAdd.JPG "Help Add"
@@ -170,3 +191,5 @@
 [add3]: images/add3.JPG "Add 3"
 [list1]: images/list1.JPG "List 1"
 [list2]: images/list2.JPG "List 2"
+[modify1]: images/modify1.JPG "Modify 1"
+[modify2]: images/modify2.JPG "Modify 2"
